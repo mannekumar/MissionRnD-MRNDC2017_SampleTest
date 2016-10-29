@@ -33,10 +33,46 @@ namespace spec
 		[TestMethod, Timeout(1000)]
 		void Sample1_P1()
 		{
-			
+			int * ans=sumoftwo(NULL,0, 2);
+			if (ans == NULL){
+
+			}
+			else{
+				Assert::Fail("Failed if nums is Null");
+			}
 		};
 
-		//Real Test Cases
+		[TestMethod, Timeout(1000)]
+		void Sample2_P1()
+		{
+			int a[5] = { 1, 2, 3, 4, 5 };
+			int* ans = sumoftwo(a,0,-1);
+			if(ans == NULL){
+
+			}
+			else{
+				Assert::Fail("Failed if nums len is <1");
+			}
+		};
+		[TestMethod, Timeout(1000)]
+		void Sample3_P1()
+		{
+			int a[5] = { 15, 20, 13, 44, 5 };
+			int len = 5;
+			int i1 = 1;
+			int i2 = 4;
+			int target = 25;
+			int* ans = sumoftwo(a,target,len);
+			if (ans == NULL){
+				Assert::Fail("Got Null ,Where as Answer Array Expected");
+			}
+			else{
+				Assert::AreEqual(i1, ans[0], L"Failed Real 0 for NULL case in P1", 1, 2);
+				Assert::AreEqual(i2, ans[1], L"Failed Real 0 for NULL case in P1", 1, 2);
+			}
+		};
+
+		//Real Cases
 
 
 	};
