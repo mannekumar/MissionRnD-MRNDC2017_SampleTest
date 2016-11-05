@@ -41,5 +41,24 @@ struct oddevennode{
 
 int * oddeven_sll(struct oddevennode *head){
 	
-	return NULL;
+	int  i=0, j=0;
+	int *ret;
+	ret = (int *)malloc(2 * sizeof(int));
+	if (head==NULL)
+		return NULL;
+	while (head != NULL)
+	{
+		head = head->next;
+	}
+	
+
+
+
+
+
+
+	ret[0] = i;
+	ret[1] = j;
+	return ret;
+
 }
