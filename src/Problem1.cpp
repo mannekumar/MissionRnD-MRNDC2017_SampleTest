@@ -39,14 +39,15 @@ int* sumoftwo(int *nums, int target, int len){
 			if (nums[i] + nums[j] == target)
 			{
 
+				ret[0] = i;
+				ret[1] = j;
 				break;
 			}
 		}
 		if (nums[i] + nums[j] == target)
 			break;
 	}
-	ret[0] = i;
-	ret[1] = j;
+	
 	return ret;
 
 
